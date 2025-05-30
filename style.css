@@ -69,8 +69,9 @@ header h1 {
     }
 
     .menu-section {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    border: none;
+    
     }
 
     h1, h2, h3 {
@@ -95,7 +96,7 @@ body.dark-mode {
     color: #f0f0f0;
 }
 body.dark-mode .menu-section {
-    background: rgba(0, 0, 0, 0.6);
+    background: transparent;
 }
 .toggle-btn {
     position: fixed;
