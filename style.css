@@ -58,3 +58,54 @@ header h1 {
 .menu-section ul li:hover {
     background-color: #f3e5ab;
 }
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        background-image: url('background.jpg');
+        color: #f0f0f0;
+    }
+
+    .menu-section {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    h1, h2, h3 {
+        color: #ffdd88;
+    }
+
+    ul li {
+        color: #eeeeee;
+    }
+}
+
+
+body.light-mode {
+    background-color: #f4e8d9;
+    color: #000;
+}
+body.light-mode .menu-section {
+    background: rgba(255, 255, 255, 0.7);
+}
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+body.dark-mode .menu-section {
+    background: rgba(0, 0, 0, 0.6);
+}
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 8px 14px;
+    background: #fff8dc;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    border-radius: 8px;
+    font-size: 14px;
+}
