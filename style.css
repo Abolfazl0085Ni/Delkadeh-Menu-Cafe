@@ -1,114 +1,42 @@
 
 body {
-    margin: 0;
-    padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Tahoma', sans-serif;
-    direction: rtl;
-    background-color: #f4e8d9;
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: url('background-light.jpg') center/cover no-repeat fixed;
+  color: #2a2a2a;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-.wrapper {
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border-radius: 16px;
+header {
+  text-align: center;
+  padding: 1rem;
 }
 
-header h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #4e342e;
-    margin-bottom: 2rem;
+.mode-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
 }
 
 .menu-section {
-    background-color: #fff8ee;
-    padding: 1.2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin: 1.5rem;
+  border-radius: 12px;
+  background: transparent;
 }
 
-.menu-section h2 {
-    color: #6d4c41;
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
-    border-bottom: 1px solid #d7ccc8;
-    padding-bottom: .3rem;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.menu-section ul {
-    list-style: none;
-    padding: 0;
+li {
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
 }
 
-.menu-section ul li {
-    padding: .5rem;
-    margin: .4rem 0;
-    background-color: #ffffff;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    color: #3e2723;
-}
-
-.menu-section ul li:hover {
-    background-color: #f3e5ab;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1e1e1e;
-        background-image: url('background.jpg');
-        color: #f0f0f0;
-    }
-
-    .menu-section {
-    background: transparent;
-    border: none;
-    
-    }
-
-    h1, h2, h3 {
-        color: #ffdd88;
-    }
-
-    ul li {
-        color: #eeeeee;
-    }
-}
-
-
-body.light-mode {
-    background-color: #f4e8d9;
-    color: #000;
-}
-body.light-mode .menu-section {
-    background: rgba(255, 255, 255, 0.7);
-}
-body.dark-mode {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-}
-body.dark-mode .menu-section {
-    background: transparent;
-    border: none;
-    
-}
-.toggle-btn {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    padding: 8px 14px;
-    background: #fff8dc;
-    border: none;
-    cursor: pointer;
-    z-index: 999;
-    border-radius: 8px;
-    font-size: 14px;
+.dark-mode {
+  background: url('background-dark.jpg') center/cover no-repeat fixed;
+  color: #f4f4f4;
 }
