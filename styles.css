@@ -33,6 +33,18 @@ body {
     transition: background 0.5s ease, color 0.5s ease;
 }
 
+.menu-links a {
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
 /* Default (light) theme */
 body[data-theme="light"] .menu-background {
     background-image: url('image2.jpg');
@@ -51,4 +63,34 @@ body[data-theme="dark"] .menu-background {
 body[data-theme="dark"] .menu-content {
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
+}
+
+/* hot-bar page */
+.menu-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.menu-section li {
+    margin: 10px 0;
+}
+
+.back-link {
+    display: block;
+    margin: 20px;
+    font-size: 16px;
+    text-align: right;
+    text-decoration: none;
+    color: #555;
 }

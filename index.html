@@ -1,23 +1,25 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <title>Café DELKADEH Menu</title>
+    <title>منوی کافه دلکده</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="theme-toggle">Toggle Theme</button>
+    <button id="theme-toggle">تغییر مود</button>
     <div class="menu-background">
         <div class="menu-content">
-            <h1>Café DELKADEH</h1>
-            <p>Welcome to our menu!</p>
+            <h1>کافه دلکده</h1>
+            <p>به منوی ما خوش آمدید!</p>
+            <div class="menu-links">
+                <a href="menu/hot-bar.html">بار گرم</a>
+            </div>
         </div>
     </div>
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
 
-        // Apply system theme on load
         function applySystemTheme() {
             const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const storedTheme = localStorage.getItem('theme');
@@ -31,7 +33,6 @@
 
         applySystemTheme();
 
-        // Toggle theme manually
         toggleBtn.addEventListener('click', () => {
             const currentTheme = document.body.dataset.theme;
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
