@@ -2,6 +2,17 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
+    transition: background 0.5s ease;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .menu-background {
@@ -18,12 +29,26 @@ body {
     padding: 40px;
     border-radius: 12px;
     text-align: center;
+    color: #000;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
-.image1 {
+/* Default (light) theme */
+body[data-theme="light"] .menu-background {
+    background-image: url('image2.jpg');
+}
+
+body[data-theme="light"] .menu-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+/* Dark theme */
+body[data-theme="dark"] .menu-background {
     background-image: url('image1.jpg');
 }
 
-.image2 {
-    background-image: url('image2.jpg');
+body[data-theme="dark"] .menu-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
 }

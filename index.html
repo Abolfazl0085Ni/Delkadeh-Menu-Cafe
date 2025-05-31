@@ -7,17 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="menu-background image1">
+    <button id="theme-toggle">Toggle Theme</button>
+    <div class="menu-background">
         <div class="menu-content">
             <h1>Café DELKADEH</h1>
             <p>Welcome to our menu!</p>
         </div>
     </div>
-    <div class="menu-background image2">
-        <div class="menu-content">
-            <h1>Café DELKADEH</h1>
-            <p>Try our finest blends!</p>
-        </div>
-    </div>
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+
+        // Apply system theme on load
+        function applySystemTheme() {
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+
+            if (storedTheme) {
+                document.body.dataset.theme = storedTheme;
+            } else {
+                document.body.dataset.theme = systemDark ? 'dark' : 'light';
+            }
+        }
+
+        applySystemTheme();
+
+        // Toggle theme manually
+        toggleBtn.addEventListener('click', () => {
+            const currentTheme = document.body.dataset.theme;
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.body.dataset.theme = newTheme;
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
 </body>
 </html>
