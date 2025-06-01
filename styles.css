@@ -1,18 +1,24 @@
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Vazirmatn', sans-serif;
     transition: background 0.5s ease;
+    direction: rtl;
 }
 
 #theme-toggle {
     position: absolute;
     top: 20px;
     right: 20px;
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     z-index: 10;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
 }
 
 .menu-background {
@@ -22,40 +28,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('image2.jpg'); /* Default for light */
 }
 
 .menu-content {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    border-radius: 12px;
+    padding: 50px;
+    border-radius: 16px;
     text-align: center;
     color: #000;
     transition: background 0.5s ease, color 0.5s ease;
+    font-size: 22px;
 }
 
 .menu-links a {
     display: block;
-    margin: 20px 0;
-    font-size: 18px;
+    margin: 30px 0;
+    font-size: 24px;
     color: #333;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .menu-links a:hover {
     text-decoration: underline;
 }
 
-/* Default (light) theme */
 body[data-theme="light"] .menu-background {
     background-image: url('image2.jpg');
 }
 
-body[data-theme="light"] .menu-content {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #000;
-}
-
-/* Dark theme */
 body[data-theme="dark"] .menu-background {
     background-image: url('image1.jpg');
 }
@@ -65,31 +67,31 @@ body[data-theme="dark"] .menu-content {
     color: #fff;
 }
 
-/* hot-bar page */
 .menu-section {
     padding: 50px;
     text-align: center;
+    font-size: 22px;
 }
 
 .menu-section h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
 .menu-section ul {
     list-style: none;
     padding: 0;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .menu-section li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .back-link {
     display: block;
     margin: 20px;
-    font-size: 16px;
+    font-size: 18px;
     text-align: right;
     text-decoration: none;
     color: #555;

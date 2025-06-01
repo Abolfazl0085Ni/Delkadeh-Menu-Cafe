@@ -5,34 +5,32 @@
     <meta charset="UTF-8">
     <title>منوی کافه دلکده</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id="theme-toggle">تغییر مود</button>
+    <button id="theme-toggle">تغییر تم</button>
     <div class="menu-background">
         <div class="menu-content">
             <h1>کافه دلکده</h1>
             <p>به منوی ما خوش آمدید!</p>
             <div class="menu-links">
                 <a href="menu/hot-bar.html">بار گرم</a>
+                <a href="menu/dessert.html">دسر</a>
             </div>
         </div>
     </div>
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
-
         function applySystemTheme() {
             const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const storedTheme = localStorage.getItem('theme');
-
             if (storedTheme) {
                 document.body.dataset.theme = storedTheme;
             } else {
                 document.body.dataset.theme = systemDark ? 'dark' : 'light';
             }
         }
-
         applySystemTheme();
-
         toggleBtn.addEventListener('click', () => {
             const currentTheme = document.body.dataset.theme;
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
