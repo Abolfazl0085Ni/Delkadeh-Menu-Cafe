@@ -1,98 +1,30 @@
 
 body {
-    margin: 0;
     font-family: 'Vazirmatn', sans-serif;
-    transition: background 0.5s ease;
-    direction: rtl;
-}
-
-#theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10;
-    background-color: #444;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-}
-
-.menu-background {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('image2.jpg'); /* Default for light */
-}
-
-.menu-content {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 50px;
-    border-radius: 16px;
     text-align: center;
-    color: #000;
-    transition: background 0.5s ease, color 0.5s ease;
-    font-size: 22px;
+    padding: 2em;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: #7b3f00;
 }
 
 .menu-links a {
-    display: block;
-    margin: 30px 0;
-    font-size: 24px;
-    color: #333;
+    display: inline-block;
+    margin: 15px;
+    padding: 18px 36px;
+    background-color: #7b3f00;
+    color: #fff;
     text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.2em;
     font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .menu-links a:hover {
-    text-decoration: underline;
-}
-
-body[data-theme="light"] .menu-background {
-    background-image: url('image2.jpg');
-}
-
-body[data-theme="dark"] .menu-background {
-    background-image: url('image1.jpg');
-}
-
-body[data-theme="dark"] .menu-content {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-}
-
-.menu-section {
-    padding: 50px;
-    text-align: center;
-    font-size: 22px;
-}
-
-.menu-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.menu-section ul {
-    list-style: none;
-    padding: 0;
-    font-size: 22px;
-}
-
-.menu-section li {
-    margin: 15px 0;
-}
-
-.back-link {
-    display: block;
-    margin: 20px;
-    font-size: 18px;
-    text-align: right;
-    text-decoration: none;
-    color: #555;
+    background-color: #a0522d;
+    transform: scale(1.05);
 }
